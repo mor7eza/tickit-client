@@ -9,18 +9,18 @@ const Dashboard = () => {
       <Navbar />
       <Titlebar title={tr.new_ticket} />
       <div className="ui segment">
-        <div className="ui form">
+        <form className="ui form">
           <div className="fields">
             <div className="ten wide field">
-              <label>subject</label>
-              <input type="text" placeholder="subject" />
+  <label>{tr.subject}</label>
+              <input type="text" placeholder={tr.subject} />
             </div>
             <div className="six wide field">
-              <label>subject</label>
+              <label>{tr.department}</label>
               <div className="ui selection dropdown">
                 <input type="hidden" name="department" />
                 <i className="dropdown icon"></i>
-                <div className="default text">department</div>
+                <div className="default text">{tr.department}</div>
                 <div className="menu">
                   <div className="item" data-value="1">
                     sport
@@ -34,11 +34,13 @@ const Dashboard = () => {
           </div>
           <div className="fields">
             <div className="sixteen wide field">
-              <label>body</label>
-              <textarea></textarea>
+              <label>{tr.body}</label>
+              <textarea placeholder={tr.body}></textarea>
             </div>
           </div>
-        </div>
+          <button className="ui button blue">{tr.submit}</button>
+          <button className="ui button left floated red">{tr.cancel}</button>
+        </form>
       </div>
     </div>
   );

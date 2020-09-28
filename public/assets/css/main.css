@@ -10,3 +10,16 @@ body {
 .full-height {
   height: 100vh;
 }
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  right:41%;
+  font-family: Lato,sans-serif;
+  color: #BDBDBD;
+  z-index: -100;
+}
+.footer>.icon{
+  color: #F44336;
+  opacity: 0.5;
+}

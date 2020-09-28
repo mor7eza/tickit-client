@@ -14,5 +14,10 @@
   "new_ticket": "تیکت جدید",
   "tickets": "تیکت ها",
   "departments": "دپارتمان ها",
-  "users": "کاربرها"
+  "users": "کاربرها",
+  "subject":"موضوع",
+  "department":"دپارتمان",
+  "body":"متن",
+  "submit":"ثبت",
+  "cancel":"انصراف"
 }
