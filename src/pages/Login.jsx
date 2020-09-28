@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import tr from "../translation.json";
 
@@ -13,13 +14,13 @@ const Login = () => {
         <div className="ui large form">
           <div className="ui stacked segment">
             <div className="field">
-              <div className="ui left icon input">
+              <div className="ui right icon input">
                 <input type="text" placeholder={tr.email} />
                 <i className="user icon"></i>
               </div>
             </div>
             <div className="field">
-              <div className="ui left icon input">
+              <div className="ui right icon input">
                 <input type="password" placeholder={tr.password} />
                 <i className="lock icon"></i>
               </div>
@@ -29,8 +30,10 @@ const Login = () => {
             </button>
           </div>
         </div>
-        <div className="ui segment">
-          <p>dont have an account</p>
+        <div className="ui center aligned segment">
+          <p>
+            {tr.dont_have_account} <Link to="/register">{tr.signup}</Link>
+          </p>
         </div>
       </div>
     </div>

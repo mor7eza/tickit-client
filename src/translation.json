@@ -2,5 +2,17 @@
   "email": "پست الکترونیک",
   "password": "رمز عبور",
   "login": "ورود",
-  "signin_to_account": "ورود به حساب کاربری"
+  "logout": "خروج",
+  "register": "عضویت",
+  "signin_to_account": "ورود به حساب کاربری",
+  "register_an_account": "ایجاد حساب کاربری",
+  "dont_have_account": "حساب کاربری ندارید؟",
+  "already_have_account": "قبلا عضو شده اید؟",
+  "signup": "عضو شوید",
+  "first_name": "نام",
+  "last_name": "نام خانوادگی",
+  "new_ticket": "تیکت جدید",
+  "tickets": "تیکت ها",
+  "departments": "دپارتمان ها",
+  "users": "کاربرها"
 }

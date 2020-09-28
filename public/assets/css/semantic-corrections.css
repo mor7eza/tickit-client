@@ -1,0 +1,53 @@
+body,
+.ui.header,
+.ui.form input:not([type]),
+.ui.form input[type="date"],
+.ui.form input[type="datetime-local"],
+.ui.form input[type="email"],
+.ui.form input[type="file"],
+.ui.form input[type="number"],
+.ui.form input[type="password"],
+.ui.form input[type="search"],
+.ui.form input[type="tel"],
+.ui.form input[type="text"],
+.ui.form input[type="time"],
+.ui.form input[type="url"],
+.ui.button,
+.ui.menu {
+  font-family: "IRANSans", Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.ui.input > input {
+  text-align: right;
+}
+
+.ui.centered.grid > .column:not(.aligned):not(.justified):not(.row),
+.ui.centered.grid > .row > .column:not(.aligned):not(.justified),
+.ui.grid .centered.row > .column:not(.aligned):not(.justified) {
+  text-align: right;
+}
+
+.left.menu {
+  display: flex;
+  margin-right: auto !important;
+}
+
+.ui.dropdown {
+  text-align: right;
+}
+
+.ui.dropdown .menu > .item {
+  text-align: right;
+}
+
+.ui.selection.dropdown > .delete.icon,
+.ui.selection.dropdown > .dropdown.icon,
+.ui.selection.dropdown > .search.icon {
+  left: 1em;
+  right: unset;
+}
+
+.ui.selection.dropdown {
+  padding-right: 1em;
+  padding-left: 2.1em;
+}
