@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Tickets from "./pages/Tickets";
 
 function App() {
   return (
@@ -11,7 +12,10 @@ function App() {
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
       <Route exact path="/" component={Dashboard} />
-      <p className="footer">Crafted with <i className="heart icon"></i> by Morteza Aliyari</p>
+      <Route exact path="/tickets" component={Tickets} />
+      <p className="footer">
+        Crafted with <i className="heart icon"></i> by Morteza Aliyari
+      </p>
     </Router>
   );
 }

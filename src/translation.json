@@ -15,9 +15,12 @@
   "tickets": "تیکت ها",
   "departments": "دپارتمان ها",
   "users": "کاربرها",
-  "subject":"موضوع",
-  "department":"دپارتمان",
-  "body":"متن",
-  "submit":"ثبت",
-  "cancel":"انصراف"
+  "user": "کاربر",
+  "subject": "موضوع",
+  "department": "دپارتمان",
+  "body": "متن",
+  "submit": "ثبت",
+  "cancel": "انصراف",
+  "code": "کد",
+  "status": "وضعیت"
 }

@@ -11,15 +11,15 @@ body {
   height: 100vh;
 }
 
-.footer{
+.footer {
   position: absolute;
   bottom: 0;
-  right:41%;
-  font-family: Lato,sans-serif;
-  color: #BDBDBD;
+  right: 43%;
+  font-family: Lato, sans-serif;
+  color: #bdbdbd;
   z-index: -100;
 }
-.footer>.icon{
-  color: #F44336;
+.footer > .icon {
+  color: #f44336;
   opacity: 0.5;
 }
