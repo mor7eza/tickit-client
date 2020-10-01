@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Titlebar from "../components/Titlebar";
 import tr from "../translation.json";
 
-const Dashboard = () => {
+const NewTicket = () => {
   return (
     <div className="ui container">
       <Navbar />
@@ -12,7 +12,7 @@ const Dashboard = () => {
         <form className="ui form">
           <div className="fields">
             <div className="ten wide field">
-  <label>{tr.subject}</label>
+              <label>{tr.subject}</label>
               <input type="text" placeholder={tr.subject} />
             </div>
             <div className="six wide field">
@@ -46,4 +46,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default NewTicket;
