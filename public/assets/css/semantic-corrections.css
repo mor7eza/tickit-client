@@ -52,6 +52,14 @@ body,
   padding-left: 2.1em;
 }
 
-button, input, optgroup, select, textarea{
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: "IRANSans", Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+i.icon {
+  margin: 0 0 0 0.25rem;
 }

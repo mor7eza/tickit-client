@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "../components/Navbar";
 import Titlebar from "../components/Titlebar";
 import tr from "../translation.json";
@@ -42,6 +43,9 @@ const NewTicket = () => {
           <button className="ui button left floated red">{tr.cancel}</button>
         </form>
       </div>
+      <Helmet>
+        <script>$(".ui.dropdown").dropdown()</script>
+      </Helmet>
     </div>
   );
 };

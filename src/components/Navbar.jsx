@@ -1,8 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
 import tr from "../translation.json";
+import { AuthContext } from "../context/auth";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const context = useContext(AuthContext);
+  const history = useHistory();
+  const logoutHandler = (event) => {
+    context.logout();
+    history.push("/login");
+  };
   return (
     <div class="ui stackable menu">
       <div class="item">
@@ -22,9 +29,9 @@ const Navbar = () => {
       </Link>
       <div className="left menu">
         <Link to="/me" class="item">
-          مرتضی علی یاری
+          {`${context.firstName} ${context.lastName}`}
         </Link>
-        <Link to="/" class="item">
+        <Link class="item" onClick={logoutHandler}>
           {tr.logout}
         </Link>
       </div>

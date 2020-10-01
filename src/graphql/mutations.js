@@ -5,6 +5,16 @@ export const LOGIN = gql`
     login(email: $email, password: $password) {
       code
       success
+      token
+    }
+  }
+`;
+
+export const REGISTER = gql`
+  mutation register($firstName: String, $lastName: String, $email: String, $password: String) {
+    register(userInput: { firstName: $firstName, lastName: $lastName, email: $email, password: $password }) {
+      code
+      success
       message
       errors {
         field

@@ -23,3 +23,13 @@ body {
   color: #f44336;
   opacity: 0.5;
 }
+
+.notification {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+}
+.messenger > .message {
+  margin: 0 auto;
+}

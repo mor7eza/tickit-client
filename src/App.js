@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { AuthProvider } from "./context/auth";
 import NewTicket from "./pages/NewTicket";
+import AuthCheck from "./utils/AuthCheck";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        <AuthCheck />
         <Route exact path="/" component={NewTicket} />
         <Route exact path="/tickets" component={Tickets} />
         <p className="footer">
