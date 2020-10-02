@@ -7,6 +7,7 @@ import AuthCheck from "./utils/AuthCheck";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Tickets from "./pages/Tickets";
+import Users from "./pages/Users";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <AuthCheck />
         <Route exact path="/" component={NewTicket} />
         <Route exact path="/tickets" component={Tickets} />
+        <Route exact path="/users" component={Users} />
         <p className="footer">
           Crafted with <i className="heart icon"></i> by Morteza Aliyari
         </p>

@@ -6,7 +6,7 @@ import tr from "../translation.json";
 const Tickets = () => {
   return (
     <div className="ui container">
-      <Navbar />
+      <Navbar page="tickets" />
       <Titlebar title={tr.tickets} />
       <div className="ui segment">
         <div className="ui pilled segment">

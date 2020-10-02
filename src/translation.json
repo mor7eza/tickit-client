@@ -11,11 +11,14 @@
   "signup": "عضو شوید",
   "first_name": "نام",
   "last_name": "نام خانوادگی",
+  "full_name": "نام و نام خانوادگی",
   "new_ticket": "تیکت جدید",
   "tickets": "تیکت ها",
   "departments": "دپارتمان ها",
   "users": "کاربرها",
   "user": "کاربر",
+  "admin": "مدیر",
+  "expert": "کارشناس",
   "subject": "موضوع",
   "department": "دپارتمان",
   "body": "متن",
@@ -23,5 +26,6 @@
   "cancel": "انصراف",
   "code": "کد",
   "status": "وضعیت",
+  "role": "نقش",
   "bad_credential": "پست الکترونیکی یا رمز عبور نادرست است."
 }

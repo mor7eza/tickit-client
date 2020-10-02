@@ -7,7 +7,7 @@ import tr from "../translation.json";
 const NewTicket = () => {
   return (
     <div className="ui container">
-      <Navbar />
+      <Navbar page="newTicket" />
       <Titlebar title={tr.new_ticket} />
       <div className="ui segment">
         <form className="ui form">
