@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Titlebar from "../components/Titlebar";
 import { GET_USERS } from "../graphql/queries";
 import tr from "../translation.json";
+import { Link } from "react-router-dom";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -20,6 +21,11 @@ const Users = () => {
       <Navbar page="users" />
       <Titlebar title={tr.users} />
       <div className="ui segment">
+        <div className="ui pilled segment">
+          <Link to="/user" className="ui primary button">
+            {tr.add_user}
+          </Link>
+        </div>
         <table className="ui fixed single line striped selectable table">
           <thead>
             <tr>

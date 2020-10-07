@@ -39,7 +39,9 @@ const NewTicket = () => {
               <textarea placeholder={tr.body}></textarea>
             </div>
           </div>
-          <button className="ui button blue">{tr.submit}</button>
+          <button className="ui button blue" type="submit">
+            {tr.submit}
+          </button>
           <button className="ui button left floated red">{tr.cancel}</button>
         </form>
       </div>
