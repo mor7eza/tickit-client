@@ -5,11 +5,15 @@ import Titlebar from "../components/Titlebar";
 import { GET_USERS } from "../graphql/queries";
 import tr from "../translation.json";
 import { Link } from "react-router-dom";
+import UserCard from "../components/UserCard";
+import Loading from "../components/Loading";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
+  const [search, setSearch] = useState("");
   const { loading } = useQuery(GET_USERS, {
     onCompleted({ getUsers }) {
+      console.log(users);
       if (getUsers.success) {
         setUsers(getUsers.users);
       }
@@ -25,31 +29,26 @@ const Users = () => {
           <Link to="/user" className="ui primary button">
             {tr.add_user}
           </Link>
+          <div class="ui right icon input float-left">
+            <input type="text" placeholder={`${tr.search_user}...`} />
+            <i class="users icon"></i>
+          </div>
         </div>
-        <table className="ui fixed single line striped selectable table">
-          <thead>
-            <tr>
-              <th className="center aligned one wide">#</th>
-              <th className="center aligned">{tr.full_name}</th>
-              <th className="center aligned">{tr.email}</th>
-              <th className="center aligned">{tr.role}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user, index) => {
-              return (
-                <tr>
-                  <td className="center aligned">{index + 1}</td>
-                  <td className="center aligned">{`${user.firstName} ${user.lastName}`}</td>
-                  <td className="center aligned">{user.email}</td>
-                  <td className="center aligned">
-                    {user.role === "ADMIN" ? tr.admin : user.role === "EXPERT" ? tr.expert : tr.user}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className="ui cards">
+            {users.map((user) => (
+              <UserCard
+                key={user.id}
+                id={user.id}
+                name={`${user.firstName} ${user.lastName}`}
+                email={user.email}
+                role={user.role === "ADMIN" ? tr.admin : user.role === "EXPERT" ? tr.expert : tr.user}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

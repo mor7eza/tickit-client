@@ -33,3 +33,12 @@ body {
 .messenger > .message {
   margin: 0 auto;
 }
+
+.centered-message {
+  margin-right: 50% !important;
+  transform: translate(50%, 0);
+}
+
+.float-left {
+  float: left;
+}

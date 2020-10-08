@@ -21,7 +21,7 @@ const Notification = ({ type, message }) => {
   }
   return (
     <div className="notification">
-      <div className={"ui compact small message " + color}>
+      <div className={"ui compact small message centered-message " + color}>
         <p>
           <i className={"icon " + icon}></i>
           {message}

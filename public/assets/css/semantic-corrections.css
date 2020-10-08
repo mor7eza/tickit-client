@@ -63,3 +63,17 @@ textarea {
 i.icon {
   margin: 0 0 0 0.25rem;
 }
+
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header {
+  font-family: "IRANSans", Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.ui.card,
+.ui.cards > .card {
+  width: 263px;
+}
+
+.ui.input > input {
+  font-family: "IRANSans", Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}

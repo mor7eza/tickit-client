@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Tickets from "./pages/Tickets";
 import Users from "./pages/Users";
-import User from "./pages/User";
+import NewUser from "./pages/NewUser";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/" component={NewTicket} />
         <Route exact path="/tickets" component={Tickets} />
         <Route exact path="/users" component={Users} />
-        <Route exact path="/user" component={User} />
+        <Route exact path="/user" component={NewUser} />
         <p className="footer">
           Crafted with <i className="heart icon"></i> by Morteza Aliyari
         </p>
