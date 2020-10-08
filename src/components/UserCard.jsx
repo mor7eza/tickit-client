@@ -10,7 +10,10 @@ const UserCard = ({ name, role, email, id }) => {
         <div className="center aligned meta">{role}</div>
         <div className="center aligned description">{email}</div>
       </div>
-      <Link to={`/users/${id}`} class="ui bottom attached teal button">
+      <Link
+        to={`/users/${id}`}
+        class={"ui bottom attached button " + (role === tr.admin ? "purple" : role === tr.expert ? "teal" : "blue")}
+      >
         {tr.details}
       </Link>
     </div>
