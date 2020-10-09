@@ -12,7 +12,7 @@ const UserCard = ({ name, role, email, id }) => {
       </div>
       <Link
         to={`/users/${id}`}
-        class={"ui bottom attached button " + (role === tr.admin ? "purple" : role === tr.expert ? "teal" : "blue")}
+        className={"ui bottom attached button " + (role === tr.admin ? "purple" : role === tr.expert ? "teal" : "blue")}
       >
         {tr.details}
       </Link>

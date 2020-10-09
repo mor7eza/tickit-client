@@ -28,10 +28,21 @@ const Users = () => {
   useEffect(() => {
     if (search.length) {
       let result = usersData.filter((user) => {
-        const fullName = `${user.firstName} ${user.lastName}`;
-        if (fullName.includes(search) || user.role.includes(search) || user.email.includes(search)) {
-          return user;
+        let role;
+        switch (user.role) {
+          case "ADMIN":
+            role = tr.admin;
+            break;
+          case "EXPERT":
+            role = tr.expert;
+            break;
+          default:
+            role = tr.user;
+            break;
         }
+        const fullName = `${user.firstName} ${user.lastName}`;
+        if (fullName.includes(search) || role.includes(search) || user.email.includes(search)) return user;
+        return null;
       });
       if (!result) result = [];
       setUsers(result);
@@ -49,9 +60,9 @@ const Users = () => {
           <Link to="/user" className="ui primary button">
             {tr.add_user}
           </Link>
-          <div class="ui right icon input float-left">
+          <div className="ui right icon input float-left">
             <input type="text" placeholder={`${tr.search}...`} value={search} onChange={searchHandler} />
-            <i class="users icon"></i>
+            <i className="users icon"></i>
           </div>
         </div>
         {loading ? (
@@ -59,9 +70,9 @@ const Users = () => {
         ) : (
           <div className="ui cards">
             {!users.length ? (
-              <h3 class="ui icon header nodata-placeholder grey">
-                <i class="folder open icon"></i>
-                <div class="content">{tr.nodata}</div>
+              <h3 className="ui icon header nodata-placeholder grey">
+                <i className="folder open icon"></i>
+                <div className="content">{tr.nodata}</div>
               </h3>
             ) : (
               users.map((user) => (

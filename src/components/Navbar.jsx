@@ -13,29 +13,29 @@ const Navbar = (props) => {
     history.push("/login");
   };
   return (
-    <div class="ui stackable menu">
-      <div class="item">
+    <div className="ui stackable menu">
+      <div className="item">
         <i className="check circle blue icon" style={{ fontSize: "1.4em" }}></i>
       </div>
-      <Link to="/" class={"item" + (page === "newTicket" ? " active" : "")}>
+      <Link to="/" className={"item" + (page === "newTicket" ? " active" : "")}>
         {tr.new_ticket}
       </Link>
-      <Link to="/tickets" class={"item" + (page === "tickets" ? " active" : "")}>
+      <Link to="/tickets" className={"item" + (page === "tickets" ? " active" : "")}>
         {tr.tickets}
       </Link>
-      <Link to="/departments" class={"item" + (page === "departments" ? " active" : "")}>
+      <Link to="/departments" className={"item" + (page === "departments" ? " active" : "")}>
         {tr.departments}
       </Link>
-      <Link to="/users" class={"item" + (page === "users" ? " active" : "")}>
+      <Link to="/users" className={"item" + (page === "users" ? " active" : "")}>
         {tr.users}
       </Link>
       <div className="left menu">
-        <Link to="/me" class="item">
+        <Link to="/me" className="item">
           {`${context.firstName} ${context.lastName}`}
         </Link>
-        <Link class="item" onClick={logoutHandler}>
+        <a href="/" className="item" onClick={logoutHandler}>
           {tr.logout}
-        </Link>
+        </a>
       </div>
     </div>
   );

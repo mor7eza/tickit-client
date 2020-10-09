@@ -10,8 +10,8 @@ const Tickets = () => {
       <Titlebar title={tr.tickets} />
       <div className="ui segment">
         <div className="ui pilled segment">
-          <div class="ui toggle checkbox">
-            <input type="checkbox" tabindex="0" class="hidden" />
+          <div className="ui toggle checkbox">
+            <input type="checkbox" tabindex="0" className="hidden" />
             <label>sdsd</label>
           </div>
         </div>

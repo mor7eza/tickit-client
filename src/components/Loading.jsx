@@ -3,8 +3,8 @@ import tr from "../translation.json";
 
 const Loading = () => {
   return (
-    <div class="ui active inverted dimmer">
-      <div class="ui text loader">{tr.loading}</div>
+    <div className="ui active inverted dimmer">
+      <div className="ui text loader">{tr.loading}</div>
     </div>
   );
 };

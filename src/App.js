@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import Tickets from "./pages/Tickets";
 import Users from "./pages/Users";
 import NewUser from "./pages/NewUser";
+import UserDetails from "./pages/UserDetails";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/tickets" component={Tickets} />
         <Route exact path="/users" component={Users} />
         <Route exact path="/user" component={NewUser} />
+        <Route exact path="/users/:id" component={UserDetails} />
         <p className="footer">
           Crafted with <i className="heart icon"></i> by Morteza Aliyari
         </p>
